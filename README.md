@@ -1,6 +1,8 @@
 # DRScaffold: Boosting Dense-Scene Reasoning in Lightweight Vision Language Models
 
-[Xinrui Shi](https://github.com/irene-shi), [Kai Liu](https://kai-liu.cn/), Ziqing Zhang, Jianze Li, Anqi Li, and [Yulun Zhang](http://yulunzhang.com/), "DRScaffold: Boosting Dense-Scene Reasoning in Lightweight Vision Language Models", arxiv, 2026
+[Xinrui Shi](https://github.com/irene-shi), [Kai Liu](https://kai-liu.cn/), Ziqing Zhang, Jianze Li, Anqi Li, and [Yulun Zhang](http://yulunzhang.com/)
+
+"DRScaffold: Boosting Dense-Scene Reasoning in Lightweight Vision Language Models", arxiv, 2026
 
 <div>
 <a href="https://github.com/irene-shi/DRScaffold" target='_blank' style="text-decoration: none;"><img src="https://visitor-badge.laobi.icu/badge?page_id=irene-shi/DRScaffold"></a>
