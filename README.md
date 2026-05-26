@@ -9,7 +9,7 @@
 <a href="https://github.com/irene-shi/DRScaffold/stargazers" target='_blank' style="text-decoration: none;"><img src="https://img.shields.io/github/stars/irene-shi/DRScaffold?style=social"></a>
 </div>
 
-[[arXiv](https://arxiv.org/abs/xxxx.xxxxx)]
+[[arXiv](https://arxiv.org/abs/2605.26038)]
 
 #### 🔥🔥🔥 News
 
