@@ -96,7 +96,7 @@ If you find the code helpful in your research or work, please cite the following
 @article{shi2026drscaffold,
   title={DRScaffold: Boosting Dense-Scene Reasoning in Lightweight Vision Language Models},
   author={Shi, Xinrui and Liu, Kai and Zhang, Ziqing and Li, Jianze and Li, Anqi and Zhang, Yulun},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  journal={arXiv preprint arXiv:2605.26038},
   year={2026}
 }
 ```
