@@ -13,6 +13,7 @@
 
 #### 🔥🔥🔥 News
 
+- **2026-09-26:** DRScaffold is accepted by NeurIPS 2026. ⭐️⭐️⭐️
 - **2026-05-06:** This repo is released. ⭐️⭐️⭐️
 
 ---
