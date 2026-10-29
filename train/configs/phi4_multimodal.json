@@ -1,0 +1,10 @@
+{
+  "extends": "qwen2_5_vl_3b.json",
+  "model": "microsoft/Phi-4-multimodal-instruct",
+  "common": {
+    "model_type": "phi4_multimodal",
+    "template": "phi4_multimodal",
+    "tuner_type": "drscaffold_phi4",
+    "target_regex": "model\\.layers\\.[0-9]+\\.self_attn\\.(qkv_proj|o_proj)"
+  }
+}

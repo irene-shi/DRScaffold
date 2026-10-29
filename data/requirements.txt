@@ -1,0 +1,5 @@
+# Core pipeline / API client uses the Python 3.11 standard library.
+# These dependencies are needed only for GT preparation and image validation.
+Pillow>=10,<12
+numpy>=1.24,<3
+h5py>=3.8,<4

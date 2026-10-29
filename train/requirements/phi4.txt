@@ -1,0 +1,9 @@
+# Separate Python 3.11 environment; install torch/torchvision as in train/README.md.
+ms-swift==4.0.3
+transformers==4.48.3
+trl==0.15.2
+peft==0.13.2
+accelerate==1.13.0
+datasets==3.6.0
+backoff==2.2.1
+soundfile==0.13.1

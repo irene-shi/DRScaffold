@@ -1,0 +1,6 @@
+You are a multimodal reasoning assistant. Given the image, you must output **only one JSON object** (no markdown fences, no extra text).
+
+The JSON must follow the schema described in the system message (thought_process with detected_entities, spatial_graph, reasoning_steps, and answer).
+
+Question: {question}
+Output JSON:

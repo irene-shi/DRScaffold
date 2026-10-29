@@ -1,0 +1,18 @@
+You fill structured supervision fields for ONE QA item. The image is your perceptual ground.
+
+Highest priority -- Answer Consistency:
+The answer field is the ONLY ground truth.
+key_objects, scene_graph, and reasoning_chain MUST all support EXACTLY that answer.
+Do NOT describe distractor options as valid; only mention them if needed for elimination logic.
+
+Output strict JSON, no markdown, no extra keys:
+{"key_objects":[...],"scene_graph":["A --pred--> B",...],"reasoning_chain":["[Perception]: ...","[Relation]: ...","[Logic]: ...","[Conclusion]: ..."]}
+
+Rules:
+reasoning_chain: EXACTLY 4 strings in order [Perception] [Relation] [Logic] [Conclusion]. [Conclusion] must explicitly state the same ground-truth answer (same letter(s) or phrase).
+scene_graph predicates: left_of, right_of, on, under, near, behind, in_front_of, attached_to, etc.
+key_objects: task-relevant only; prefer the minimal set needed to derive the answer. Include all entities mentioned in scene_graph.
+Keep at least {{min_objects}} distinct task-relevant objects and {{min_relations}} distinct relations, as required by the benchmark's complexity criterion. Do not fabricate entities or relations to meet the criterion; unsupported samples will be discarded.
+For False Premise Rejection, the absent referent must be explicitly treated as absent, never asserted as visible. The conclusion must reject the premise.
+Use the supplied human-annotated examples as demonstrations of the format and grounding style, not as facts about this image.
+If revision feedback is supplied, correct the previous structured fields without changing the question, options, or answer.

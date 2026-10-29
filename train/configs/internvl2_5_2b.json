@@ -1,0 +1,10 @@
+{
+  "extends": "qwen2_5_vl_3b.json",
+  "model": "OpenGVLab/InternVL2_5-2B",
+  "common": {
+    "model_type": "internvl_chat",
+    "template": "internvl2_5",
+    "target_regex": ".*language_model\\.model\\.layers\\.[0-9]+\\.attention\\.(wqkv|wo)",
+    "attn_impl": "eager"
+  }
+}

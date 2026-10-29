@@ -1,0 +1,32 @@
+You are an expert multimodal reasoning annotator for {{domain}} scenes.
+Generate exactly {{count}} high-quality reasoning questions about the given image.
+
+Grounding & Answer Certainty (override all other rules):
+1. Do NOT ask about objects that are too small, heavily occluded, or in extreme shadow.
+2. Answers must be uniquely supportable by unambiguous visible evidence.
+3. Prefer large, salient anchors occupying enough pixels.
+
+Question Design (5 Categories; {{coverage}}):
+1. Perception: attribute identification anchored by multi-hop referring expressions; format: single_choice or multi_select.
+2. Spatial Reasoning: spatial layout and simple physics; must involve spatial relations.
+3. Affordance Reasoning: object use within scene context; must rely on object relationships.
+4. Anomaly Detection: unusual or unsafe placements; open-ended but MUST be grounded in visible evidence.
+5. False Premise Rejection: inquire about an object or spatial relationship completely absent from the image as if it were present. Prefer objects not visible but logically plausible in the scene, such as accessories on a visible object. Use referring expressions tied to what is visible so the model must search the image before concluding the part/object is absent. Example: only a car with an ordinary roof and no roof rack; ask "What color is the luggage rack on the roof of the car?" The answer must reject the premise from evidence. Do NOT use hypothetical language ("If there were...", "Is there...").
+
+Multi-hop spatial chains (preferred when semantically smooth):
+Bad: "What color is the lamp?"
+Better: "What color is the object on the floor to the left of the TV stand and in front of the window?"
+
+Difficulty constraints:
+- Never ask questions answerable by common sense without reading the image.
+- Avoid vague attributes; avoid precise metric estimation.
+- MCQ distractors must be ruled out by visual evidence.
+- The question should involve at least 3 task-relevant objects and at least 3 relations. Do not invent extra objects to meet this constraint.
+{{domain_rules}}
+
+Output strict JSON, question and answer only; do NOT generate structured fields yet:
+{"questions":[{"id":"Q1","type":"single_choice","category":"Perception","question":"...","options":["A. ...","B. ...","C. ...","D. ..."],"answer":"A"}]}
+Use unique question ids. type must be single_choice, multi_select, or open_ended.
+For open_ended, options must be null and answer must be a short English phrase or sentence.
+For single_choice use one letter A-D; for multi_select use sorted, comma-separated letters with no spaces (e.g. A,C), and state that multiple answers are allowed in the question.
+Use the five category names above exactly. No markdown fences or extra keys.

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+outputs/
+data/prepared/
+*.log
+.env
+.env.*
+!.env.example
+data/work/
+data/inputs/*
+!data/inputs/.gitkeep
+data/human_samples/*
+!data/human_samples/.gitkeep
+!data/human_samples/README.md

@@ -1,0 +1,9 @@
+You are given a visual reasoning question but you CANNOT see the image.
+Answer using only the question text and options (if any). Common-sense or linguistic cues may mislead; still pick the most likely option or give a brief text answer.
+
+You MUST output JSON only with a single field "answer":
+- single_choice: exactly one of "A", "B", "C", "D".
+- multi_select: comma-separated letters, e.g. "A,C" or "B,D" (no spaces, letters sorted ascending).
+- open_ended: a short, precise English phrase or sentence.
+
+Do not output markdown fences or any text outside the JSON object.

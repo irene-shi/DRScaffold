@@ -1,0 +1,63 @@
+{
+  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "common": {
+    "model_type": "qwen2_5_vl",
+    "tuner_type": "lora",
+    "freeze_vit": true,
+    "freeze_aligner": true,
+    "target_regex": ".*\\.layers\\.[0-9]+\\.self_attn\\.(q_proj|k_proj|v_proj|o_proj)",
+    "lora_rank": 16,
+    "lora_alpha": 16,
+    "lora_dropout": 0.2,
+    "gradient_accumulation_steps": 4,
+    "weight_decay": 0.05,
+    "max_grad_norm": 1.0,
+    "max_length": 8192,
+    "torch_dtype": "bfloat16",
+    "attn_impl": "sdpa",
+    "per_device_train_batch_size": 1,
+    "per_device_eval_batch_size": 1,
+    "gradient_checkpointing": true,
+    "truncation_strategy": "delete",
+    "split_dataset_ratio": 0.0,
+    "load_from_cache_file": false,
+    "strict": true,
+    "eval_strategy": "steps",
+    "eval_steps": 300,
+    "save_steps": 300,
+    "save_total_limit": 2,
+    "save_only_model": false,
+    "logging_steps": 5,
+    "dataloader_num_workers": 4,
+    "dataset_num_proc": 4,
+    "report_to": "none",
+    "add_version": false
+  },
+  "phases": [
+    {
+      "num_train_epochs": 0.5,
+      "learning_rate": 5e-05,
+      "lr_scheduler_type": "cosine",
+      "warmup_ratio": 0.1
+    },
+    {
+      "num_train_epochs": 1.0,
+      "learning_rate": 4e-05,
+      "lr_scheduler_type": "constant_with_warmup",
+      "warmup_steps": 20
+    },
+    {
+      "num_train_epochs": 1.0,
+      "learning_rate": 3e-05,
+      "lr_scheduler_type": "constant_with_warmup",
+      "warmup_steps": 30
+    },
+    {
+      "num_train_epochs": 1.0,
+      "learning_rate": 3e-06,
+      "lr_scheduler_type": "cosine",
+      "warmup_ratio": 0.05
+    }
+  ],
+  "seed": 42
+}

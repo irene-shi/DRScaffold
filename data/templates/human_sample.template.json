@@ -1,0 +1,21 @@
+{
+  "image_id": "",
+  "domain": "",
+  "split": "train",
+  "group_id": "",
+  "image": "",
+  "qa": {
+    "id": "",
+    "type": "",
+    "category": "",
+    "question": "",
+    "options": null,
+    "answer": ""
+  },
+  "annotation": {
+    "key_objects": [],
+    "scene_graph": [],
+    "reasoning_chain": []
+  },
+  "approved": false
+}
